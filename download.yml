@@ -1,0 +1,11 @@
+logfile: "C:\\downloader\\updater.log"
+observe:
+  - "C:\\downloader\\source\\M200\\atrxM200.atrx"
+  - "C:\\downloader\\source\\M200\\defM200.tlgx"
+  - "C:\\downloader\\source\\X200\\Tooling.atrx"
+  - "C:\\downloader\\source\\X200\\ST.tlgx"
+downloaddir: "C:\\downloader\\download"
+hashlog : "C:\\downloader\\hashlog.csv"
+x200settings: "C:\\downloader\\settings\\X200.settingsx"
+m200settings: "C:\\downloader\\settings\\M200.settingsx"
+unarchivepath: "C:\\downloader\\unarchive"
