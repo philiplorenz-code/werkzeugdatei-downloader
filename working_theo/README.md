@@ -1,3 +1,33 @@
+# Wichtig
+Folgende Werte müssen angepasst werden:
+
+## download.yml
+Hier müssen die Pfade korrekt gesetzt werden. Bei Windows gibt es die Problematik mit Backslash. Damit alles funktioniert müssen immer doppelte Backslashes gesetzt werden. Beispiel:
+
+Aus "C:\downloader\download.yaml" wird
+"C:\\downloader\\download.yaml"
+
+
+Ist doof, ist aber leider so. Details zu der Problematik können hier nachgelesen werden: https://www.geeksforgeeks.org/how-to-escape-the-special-character-in-yaml-with-examples/
+
+## hashlog.csv
+Datei am besten leeren. Dazu die Datei mit dem Editor oder Notepad++ oder Visual Studio Code öffnen und alles außer den Überschriften (erste Zeile) weglöschen.
+
+## runner.ps1
+Hier müssen die Werte der ersten Zeilen angepasst werden.
+$scriptPath muss dem Pfad der Datei "werkzeugdateidl.ps1" entsprechen
+$logFilePath entspricht dem Pfad der Datei, in welche die Log-Nachrichten geschrieben werden sollen. Dieser ist frei wählbar, sollte aber auch im Ordner der "werkzeugdateidl.ps1" sein.
+
+## deploy_interval.ps1 und deploy_startup.ps1
+Bei beiden Dateien muss in Zeile 1 der Pfad zu der "runner.ps1" angegeben werden. Wichtig: nicht versehentlich das "-File" weglöschen.
+
+## Test der Automatismus
+Um zu prüfen, ob alles funktioniert, kann die runner.ps1 ausgeführt werden. Hierzu Visual Studio Code öffnen. In VSCode dann den ganzen Ordner öffnen, in welchem sich das Projekt befindet. Also den Ordner wo die runner.ps1 liegt.
+
+Anschließend die runner.ps1 ausführen.
+Wenn das alles funktioniert, dann können die Scheduled Tasks angelegt werden. Dazu identisch zur runner.ps1 die Dateien deploy_interval.ps1 und deploy_startup.ps1 ausführen (als Admin in der Konsole).
+
+---
 # Werkzeugdatei Updater
 
 Dieses Skript überwacht bestimmte Dateien und führt Aktionen aus, wenn diese Dateien geändert wurden. Bei Änderungen wird die Datei in ein bestimmtes Verzeichnis kopiert und der Hash-Wert der Datei wird aktualisiert. Außerdem wird eine Protokolldatei mit Informationen zu den durchgeführten Aktionen erstellt.
