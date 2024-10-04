@@ -1,0 +1,11 @@
+logfile: "C:/Werkzeugdownloader/downloader/log.log"
+observe:
+  - "G:/Meine Ablage/05 CNC/12 Werkzeugdateien/M200/atrxM200.atrx"
+  - "G:/Meine Ablage/05 CNC/12 Werkzeugdateien/M200/defM200.tlgx"
+  - "G:/Meine Ablage/05 CNC/12 Werkzeugdateien/X200/Tooling.atrx"
+  - "G:/Meine Ablage/05 CNC/12 Werkzeugdateien/X200/ST.tlgx"
+downloaddir: "C:/Werkzeugdownloader/downloader/download"
+hashlog : "C:/Werkzeugdownloader/downloader/hashlog.csv"
+x200settings: "C:/Users/Public/Documents/SCM Group/Maestro/Environments/X200.settingsx"
+m200settings: "C:/Users/Public/Documents/SCM Group/Maestro/Environments/M200.settingsx"
+unarchivepath: "C:/Werkzeugdownloader/downloader/unzipping"
